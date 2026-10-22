@@ -9,7 +9,7 @@
         { self, nixpkgs }:
         let
             system = "x86_64-linux";
-            pkgs = import nixpkgs {
+            pkgs   = import nixpkgs {
                 inherit system;
 
                 config.allowUnfreePredicate = pkg:
@@ -35,6 +35,7 @@
                         oracledb
                         django-widget-tweaks
                         djangorestframework
+                        djangorestframework-stubs
                         django-filter
                         django-stubs
                     ]))

@@ -7,3 +7,6 @@ apps/core/migrations/*
 
 apps/categories/__pycache__/*
 apps/categories/migrations/__pycache__/*
+
+apps/products/__pycache__/*
+apps/products/migrations/__pycache__/*
