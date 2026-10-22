@@ -10,3 +10,6 @@ apps/categories/migrations/__pycache__/*
 
 apps/products/__pycache__/*
 apps/products/migrations/__pycache__/*
+
+apps/socialnetworks/__pycache__/*
+apps/socialnetworks/migrations/__pycache__/*
