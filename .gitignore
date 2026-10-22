@@ -19,3 +19,6 @@ apps/persons/migrations/__pycache__/*
 
 apps/employees/__pycache__/*
 apps/employees/migrations/__pycache__/*
+
+apps/clients/__pycache__/*
+apps/clients/migrations/__pycache__/*
