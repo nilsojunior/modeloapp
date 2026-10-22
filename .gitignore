@@ -13,3 +13,6 @@ apps/products/migrations/__pycache__/*
 
 apps/socialnetworks/__pycache__/*
 apps/socialnetworks/migrations/__pycache__/*
+
+apps/persons/__pycache__/*
+apps/persons/migrations/__pycache__/*
