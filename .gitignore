@@ -16,3 +16,6 @@ apps/socialnetworks/migrations/__pycache__/*
 
 apps/persons/__pycache__/*
 apps/persons/migrations/__pycache__/*
+
+apps/employees/__pycache__/*
+apps/employees/migrations/__pycache__/*
