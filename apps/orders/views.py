@@ -4,6 +4,7 @@ from orderitems.models import Orderitem
 from products.models   import Product
 from clients.models    import Client
 from employees.models  import Employee
+from invoices.views    import create_invoice_for_order
 
 # Create your views here.
 
@@ -117,6 +118,7 @@ def checkout(request: HttpRequest) -> HttpResponse:
             total_order += subtotal
         order.total = total_order
         order.save()
+        create_invoice_for_order(order)
         request.session["cart"] = {}
         request.session.modified = True
         return redirect("orders:view_order", id = order.id)

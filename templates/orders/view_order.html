@@ -7,6 +7,7 @@
 <br />
 <b>ID:</b> {{ order.id }}
 <br />
+
 <b>Cliente:</b>
     {% if order.client %}
         {{ order.client.first_name }} {{ order.client.last_name }}
@@ -17,6 +18,18 @@
         {{ order.employee.first_name }} {{ order.employee.last_name }}
     {% endif %}
 <br />
+
+<b>Nota Fiscal:</b>
+    {% if order.invoice %}
+        <a href="{% url "invoices:view_invoice" order.invoice.id %}" target="_blank" rel="noopener noreferrer">
+            {{ order.invoice.number }}
+        </a>
+        - {{ order.invoice.issue_date }}
+    {% else %}
+        Não gerada
+    {% endif %}
+<br />
+
 <b>Status:</b> {{ order.get_status_display }}
 <br />
 <b>Forma de pagamento:</b> {{ order.get_payment_method_display }}
