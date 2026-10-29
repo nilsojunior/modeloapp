@@ -41,9 +41,9 @@
             <td>
                 <ul>
                     {% for socialnetwork in client.socialnetwork.all %}
-                    <li>{{ socialnetwork.name }}</li>
+                    <li><a href="{{ socialnetwork.url }}">{{ socialnetwork.name }}</a></li>
                     {% empty %}
-                    <li>Sem redes</li>
+                    <li>Sem Redes</li>
                     {% endfor %}
                 </ul>
             </td>

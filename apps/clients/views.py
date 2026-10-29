@@ -47,3 +47,14 @@ def delete_client(request: HttpRequest, id: int) -> HttpResponse:
     client = Client.objects.get(id = id)
     client.delete()
     return redirect("clients:list_clients")
+
+def search_clients(request: HttpRequest) -> HttpResponse:
+    template_name  = "clients/list_clients.html"
+    query          = request.GET.get("query")
+    socialnetworks = Socialnetwork.objects.filter()
+    clients        = Client.objects.filter(last_name__icontains = query)
+    context = {
+        "clients": clients,
+        "socialnetworks": socialnetworks,
+    }
+    return render(request, template_name, context)
